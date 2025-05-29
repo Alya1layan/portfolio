@@ -334,6 +334,30 @@
     .text-content {
       margin-left: 40px;
     }
+      .nav-links {
+    display: none; /* Hides links on smaller screens */
+    flex-direction: column;
+    background-color: #fff8f2;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .nav-links.show {
+    display: flex; /* Shows when toggled */
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #FF7F50;
+  }
+}
   }
   
   #topic{
