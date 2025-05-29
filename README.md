@@ -1,7 +1,7 @@
 
 
 Afolayan Aaliyah | Portfolio Website
-Welcome to my portfolio website. This site is designed to simulate an interview preparation scenario for a Senior Frontend Developer role at Tech-Genie International, as part of the ICT 118 course project at Bells University of Technology in collaboration with New Horizons.
+Welcome to my portfolio website. This site is designed to simulate an interview preparation as part of the ICT 118 course project at Bells University of Technology in collaboration with New Horizons.
 🔍 Project Overview
 This project showcases my technical skills, personal background, and practical experience in web development. The portfolio includes responsive sections for About Me, Projects, Skills, Experience, and a working Contact Form.
 🚀 Live Demo
@@ -36,7 +36,7 @@ Live Portfolio Website
 │       ├── Game.py
 │       └── to_do_list.py
 🧪 Setup Instructions
-1.	Clone the repository: git clone https://github.com/yourusername/portfolio
+1.	Clone the repository: git clone https://github.com/alya1layan/portfolio-
 2.	Navigate into the folder: cd portfolio
 3.	Open index.html in your browser
 🧠 Challenges Faced
