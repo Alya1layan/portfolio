@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Art Exhibition</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bar">
+    <header class="header">
+      <img src="../images/logo.jpeg" alt="School Logo" class="logo" />
+      <h1 class="school-name">Bells University Of Tehnology </h1>
+    </header>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for an artist..." />
+  </div>
+  </div>
+
+  <!-- Featured Artwork -->
+  <section class="featured-art">
+    <h2 class="word">🎨 Artist Work of the Week</h2>
+    <div class="featured-container">
+      <img src="../images/13.jpg" alt="Featured Art" />
+      <div class="words">
+        <h3>Abstract Art by Abdurrahman Yusuff</h3>
+        <p>A surreal journey through color and imagination.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Artist Cards -->
+  <section class="artist-section">
+    <h2>Meet the Artists</h2>
+    <div class="artist-grid">
+      <div class="artist-card" onclick="location.href='artist/Yusuf.html'">
+        <img src="../images/yusuf.jpg" alt="Alice" />
+        <h3>Abdurrahman Yusuff</h3>
+        <p>300level | Abstract Art</p>
+      </div>
+      <div class="artist-card" onclick="location.href='artist/alabi.html'">
+        <img src="../images/40.jpg" alt="alabi" />
+        <h3>Alabi Oluwafolahan</h3>
+        <p>500level | Art</p>
+        </div>
+      <div class="artist-card" onclick="location.href='artist/elvina.html'">
+        <img src="../images/70.jpg" alt="elvina" />
+        <h3>Anakwuba Elvina</h3>
+        <p>100level | Pencil Sketches</p>
+      </div>
+      <div class="artist-card" onclick="location.href='artist/Micheal.html'">
+        <img src="../images/90.jpg" alt="Ben" />
+        <h3>Abiola Micheal</h3>
+        <p>100level | Pencil Art</p>
+      </div>
+      <!-- Add more artist cards as needed -->
+    </div>
+  </section>
+  <section class="musicians-section">
+    <h2>Meet the Musicians</h2>
+    <div class="artist-grid">
+      <div class="artist-card" onclick="location.href='artist/Ebuka.html'">
+        <img src="../images/1748200307560.jpg" alt="Ebuka" />
+        <h3>Ebuka Malik</h3>
+        <p>400level | Afrobeats</p>
+      </div>
+      <div class="artist-card" onclick="location.href='artist/fitty.html'">
+        <img src="../images/IMG-20250526-WA0156.jpg" alt="fitty" />
+        <h3>Aderinwale Faruq</h3>
+        <p>400level | Afrobeats</p>
+      </div>
+      <!-- Add more artist cards as needed -->
+    </div>
+  </section>
+  <section class="theatre-section">
+    <h2>Meet the Theatre Artists</h2>
+    <div class="artist-grid">
+      <div class="artist-card" onclick="location.href='artist/new.html'">
+        <img src="../images/30.jpg" alt="new" />
+        <h3>New Era</h3>
+        <p>Group | Dance Crew</p>
+      </div>
+      <div class="artist-card" onclick="location.href='artist/gst.html'">
+        <img src="../images/d.jpg" alt="Ben" />
+        <h3>Cinematography</h3>
+        <p>Group | Drama</p>
+      </div>
+      <!-- Add more artist cards as needed -->
+    </div>
+</section> <!-- Close last section -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="../images/logo.jpeg" alt="School Logo" class="footer-logo" />
+      <div>
+        <p>&copy; 2025 Bells University of Technology. All rights reserved.</p>
+        <p>Designed by Group 4</p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <a href="#">Home</a>
+      <a href="artist/Yusuf.html">Yusuf</a>
+      <a href="artist/new.html">New Era</a>
+      <a href="#">Gallery</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Put the script here, just before </body> -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("searchInput");
+    const artistCards = document.querySelectorAll(".artist-card");
+    
+    // Select all section headings (h2 elements within sections)
+    const sectionHeadings = document.querySelectorAll(
+      ".artist-section h2, .musicians-section h2, .theatre-section h2"
+    );
+
+    searchInput.addEventListener("input", function () {
+      const query = searchInput.value.toLowerCase();
+      let anyMatch = false;
+
+      artistCards.forEach(function (card) {
+        const name = card.querySelector("h3")?.textContent.toLowerCase() || "";
+        const info = card.querySelector("p")?.textContent.toLowerCase() || "";
+
+        if (name.includes(query) || info.includes(query)) {
+          card.style.display = "";
+          anyMatch = true;
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      // Hide headings if query is not empty, show them if cleared
+      sectionHeadings.forEach(function (heading) {
+        if (query !== "") {
+          heading.style.display = "none";
+        } else {
+          heading.style.display = "";
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff7f1;
+    color: #333;
+    line-height: 1.6;
+    padding: 1rem;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .logo {
+    width: 60px;
+  }
+  .school-name {
+    font-size: 1.8rem;
+    color: #d46a6a;
+  }
+  
+  /* Featured Artwork */
+  .featured-art {
+    background-color: #fff0e5;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+  .featured-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .featured-container img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Artist Cards */
+  .artist-section {
+    margin-bottom: 3rem;
+  }
+  .musicians-section {
+    margin-bottom: 3rem;
+  }
+  .theatre-section {
+    margin-bottom: 3rem;
+  }
+  .artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .artist-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  .artist-card:hover {
+    transform: scale(1.03);
+  }
+  .artist-card img {
+    width: 100%;
+    height: 250px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center center; /* You can also try 'center center' */
+    border-radius: 1rem 1rem 0 0;
+  }
+  .search-bar {
+    text-align: center;
+    margin: 2rem;
+  }
+  
+  #searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #ffd4a3;
+    border-radius: 8px;
+  }
+  .bar{
+    display: flex;
+  }
+  @media (min-width: 768px) {
+    .header {
+      justify-content: space-between;
+      padding: 1.5rem 3rem;
+    }
+  .bar{
+    max-height: fit-content;
+  }
+    .school-name {
+      font-size: 2.75rem;
+    }
+    .logo
+    {
+      width: 100px;
+      margin-right: 50px;
+    }
+  .search-bar{
+    margin-left: 100px;
+  }
+    .artist-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      padding: 2rem 3rem;
+      gap: 2rem;
+    }
+  
+    .artist-card {
+      max-width: 100%;
+    }
+  
+    .featured-container {
+      flex-direction: row;
+      text-align: left;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  
+    .featured-container img {
+      width: 50%;
+      max-height: 400px;
+      
+    }
+    .word{
+      margin-left: 140px;
+    }
+    .words{
+      margin-left: 100px;
+    }
+    .featured-container div {
+      padding: 0 2rem;
+      max-width: 50%;
+    }
+  
+    .search-bar {
+      padding: 2rem;
+    }
+  
+    #searchInput {
+      width: 400px;
+      font-size: 1.1rem;
+    }
+  }
+  .footer {
+    background-color: #2f2f2f;
+    color: #ffffff;
+    padding: 30px 20px;
+    margin-top: 40px;
+    font-size: 14px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .footer-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .footer-right {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-right a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-right a:hover {
+    color: #fdb89a; /* light peach hover color */
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+  
+    .footer-left {
+      justify-content: center;
+    }
+  
+    .footer-right {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+  
