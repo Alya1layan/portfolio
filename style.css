@@ -1,0 +1,563 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+  background-color: #fff8f2;
+  color: #1f2937;
+  line-height: 1.6;
+  }
+
+  .navbar {
+  background-color: transparent;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  }
+  
+  .navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  }
+  
+  .navbar .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FF7F50;
+  margin-left: 20px;
+  }
+  
+  .nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  }
+  
+  .nav-links li {
+  margin: 0 1rem;
+  }
+  
+  .nav-links a {
+  color: #1f2937;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+  color: #FF7F50;
+  transform: scale(1.05);
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: #FF7F50;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+  }
+  
+  
+  /* ======================
+  Hero Section
+  ========================= */
+  .hero {
+  background-image: url(js/images/hero.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 6rem 0;
+  text-align: center;
+  }
+  
+  .hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  }
+  
+  .hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  }
+  
+  .hero .btn {
+  background-color: #fff;
+  color: #FF7F50;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  }
+  
+  .hero .btn:hover {
+  background-color: #FFDAB9;
+  }
+  
+  .typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid #ff6b6b;
+  white-space: nowrap;
+  font-size: 3rem;
+  animation: typing 6.5s steps(40, end) forwards, blink 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+  }
+  
+  @keyframes blink {
+  50% { border-color: transparent; }
+  }
+  
+  /* ======================
+  About Section
+  ========================= */
+  .about {
+  background-color: #fff4ee;
+  padding: 60px 20px;
+  color: #333;
+  }
+  
+  .about .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  }
+  
+  .about h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #e07a5f;
+  }
+  
+  .about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  }
+  
+  .text-content {
+  max-width: 700px;
+  text-align: center;
+  }
+  
+  .text-content p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  }
+  
+  .text-content strong {
+  color: #e07a5f;
+  }
+  
+  .profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #e07a5f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ======================
+  Projects Section
+  ========================= */
+  #topic {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  }
+  
+  .filter-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+  }
+  
+  .filter-buttons button {
+  margin: 5px;
+  padding: 8px 16px;
+  background-color: #e07a5f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  }
+  
+  .filter-buttons button:hover {
+  background-color: #cf6b4e;
+  }
+  
+  .slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin: 2rem 0;
+  }
+  
+  .slider-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #FF7F50 #ffe8d6;
+  }
+  
+  .slider-track::-webkit-scrollbar {
+  height: 8px;
+  }
+  
+  .slider-track::-webkit-scrollbar-thumb {
+  background: #FF7F50;
+  border-radius: 10px;
+  }
+  
+  
+  .artist-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  flex: 0 0 calc(25% - 1rem);
+  scroll-snap-align: start;
+  cursor: pointer;
+  transition: transform 0.3s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  }
+  
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #FF7F50;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 10;
+  transition: background 0.3s;
+  user-select: none;
+  }
+  
+  .slider-btn:hover {
+  background: #ff7033;
+  }
+  
+  .slider-btn.left {
+  left: 5px;
+  }
+  
+  .slider-btn.right {
+  right: 5px;
+  }
+  .artist-card:hover {
+  transform: translateY(-5px);
+  }
+  
+  .artist-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  }
+  
+  .artist-card h3,
+  .artist-card p {
+  padding: 0.7rem 1rem 0 1rem;
+  font-size: 1rem;
+  }
+  
+  .live-demo-btn {
+  display: inline-block;
+  margin: 10px 1rem;
+  padding: 8px 16px;
+  background-color: #FF7F50;
+  color: white;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .live-demo-btn:hover {
+  background-color: #e0673e;
+  transform: scale(1.05);
+  }
+  
+  /* ======================
+  Skills & Progress Bars
+  ========================= */
+  .skills {
+  background-color: #fff4ee;
+  }
+  
+  .progress-bar {
+  background: #eee;
+  border-radius: 10px;
+  height: 10px;
+  width: 100%;
+  margin-top: 10px;
+  overflow: hidden;
+  }
+  
+  .progress {
+  background-color: #e07a5f;
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+  }
+  
+  /* ======================
+  Experience Section
+  ========================= */
+  .experience-entry {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #FF7F50;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .experience-entry h3 {
+  margin-bottom: 0.3rem;
+  }
+  
+  .experience-entry ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+  }
+  
+  .experience-entry li {
+  list-style: disc;
+  margin-bottom: 0.3rem;
+  }
+  
+  /* ======================
+  Contact Section
+  ========================= */
+  .contact-wrapper {
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  margin-top: 30px;
+  }
+  
+  .contact-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 20px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  }
+  
+  .contact-form .btn {
+  background-color: #e07a5f;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  }
+  
+  .contact-form .btn:hover {
+  background-color: #cf6b4e;
+  }
+  
+  #form-feedback {
+  font-size: 0.9rem;
+  color: green;
+  }
+  
+  /* ======================
+  Footer
+  ========================= */
+  footer {
+  background: #FF7F50;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: white;
+  }
+  
+  footer a {
+  color: white;
+  text-decoration: none;
+  }
+  
+  #date-time {
+  font-weight: bold;
+  color: #131212;
+  font-size: 0.95rem;
+  }
+  
+  .social-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 10px;
+  }
+  
+  .social-links a {
+  font-size: 1.5rem;
+  color: #0b0b0b;
+  transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-links a:hover {
+  color: #d94c4c;
+  transform: scale(1.2);
+  }
+  
+  /* ======================
+  Back to Top Button
+  ========================= */
+  #backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 16px;
+  font-size: 18px;
+  background-color: #e07a5f;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+  }
+  
+  #backToTop:hover {
+  background-color: #cf6b4e;
+  }
+  
+  /* ======================
+  Responsive Design
+  ========================= */
+  @media (max-width: 1024px) {
+  .artist-card {
+  flex: 0 0 calc(50% - 1rem);
+  }
+  }
+  
+  @media (max-width: 768px) {
+  .nav-links {
+  display: none;
+  flex-direction: column;
+  background-color: #fff8f2;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  }
+  
+  .nav-links.show {
+  display: flex;
+  }
+  
+  .nav-links li {
+  margin: 10px 0;
+  }
+  
+  .menu-toggle {
+  display: block;
+  }
+  }
+  
+  @media (max-width: 600px) {
+  .artist-card {
+  flex: 0 0 100%;
+  }
+  
+  .navbar .logo {
+  margin-right: 0;
+  }
+  
+  .slider-btn {
+  display: none;
+  }
+  
+  .hero h2 {
+  font-size: 2rem;
+  }
+  }
+  
+  @media (max-width: 480px) {
+  .hero h2 {
+  font-size: 1.8rem;
+  }
+  
+  .hero p {
+  font-size: 1rem;
+  }
+  
+  .hero .btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  }
+  
+  .about-content {
+  flex-direction: column;
+  text-align: center;
+  }
+  
+  .profile-img {
+  width: 150px;
+  height: 150px;
+  }
+  
+  .text-content {
+  margin-left: 0;
+  }
+  
+  .slider-track {
+  flex-direction: column;
+  }
+  
+  .contact-form {
+  margin-left: 0;
+  min-width: 100%;
+  padding: 0 10px;
+  }
+  
+  .footer-container {
+  padding: 0 10px;
+  }
+  }
+  
+  

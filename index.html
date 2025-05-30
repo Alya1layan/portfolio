@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afolayan Aaliyah | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="logo">Aaliyah</h1>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2><span class="typewriter">Hey, I'm Afolayan Aaliyah.</span></h2>
+      <p>Aspiring DevOps Engineer</p>
+      <a href="#projects" class="btn">See My Work</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="js/images/IMG-20250223-WA0003.jpg" alt="Profile Picture" class="profile-img" />
+        <div class="text-content">
+          <p class="intro">
+            I'm a dedicated and enthusiastic web developer with a strong foundation in front-end technologies.
+            I’ve worked on personal and collaborative projects that improved my practical skills in building
+            clean, responsive, and dynamic web interfaces.
+          </p>
+          <p class="skills">
+            <strong>Skills:</strong> HTML, CSS, JavaScript, Git, GitHub, Responsive Design, DevOps Fundamentals.
+          </p>
+          <p class="goals">
+            <strong>Career Goals:</strong> I aspire to become a DevOps Cloud Engineer and contribute to building scalable, impactful digital solutions.
+          </p>
+          <p class="experience">
+            My journey began with curiosity about how websites work. This led me to create multiple projects, learn version control, and collaborate with others in a healthcare system app, managing the DevOps aspect.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 id="topic">Projects</h2>
+      <div class="filter-buttons">
+        <button onclick="filterProjects('all')">All</button>
+        <button onclick="filterProjects('javascript')">JavaScript</button>
+        <button onclick="filterProjects('python')">Python</button>
+        <button onclick="filterProjects('html')">Html</button>
+      </div>      
+      <div class="slider-wrapper">
+        <button class="slider-btn left" onclick="scrollSlider('projects-slider', -1)">←</button>
+        <div class="slider-track" id="projects-slider">
+          <div class="artist-card" onclick="location.href='js/calc/index.html'" data-category="javascript">
+            <img src="js/images/1.JPG-02ad0ddd-7686-4841-9b6c-37cba014b7c8" alt="Tip Calculator" />
+            <h3>Tip Calculator</h3>
+            <p>Quickly calculate tips based on bill and percentage.</p>
+            <p><strong>Technologies:</strong>HTML, CSS, JavaScript</p>
+            <a href="js/calc/index.html" target="_blank" class="live-demo-btn">Live Demo</a>
+          </div>
+          <div class="artist-card" onclick="location.href='js/count/index.html'"data-category="javascript">
+            <img src="js/images/4.jpg-c47e880d-2c8a-412f-8e01-472ae83f02a5" alt="Character Counter" />
+            <h3>Character Counter</h3>
+            <p>Real-time counter for characters and words.</p>
+            <p><strong>Technologies:</strong>HTML, CSS, JavaScript</p>
+            <a href="js/count/index.html" target="_blank" class="live-demo-btn">Live Demo</a>
+          </div>
+          <div class="artist-card" onclick="location.href='js/pomo/index.html'"data-category="javascript">
+            <img src="js/images/3.JPG-3e02114e-4b3d-47e7-aa04-71b4f513d00a" alt="Pomodoro Timer" />
+            <h3>Pomodoro Timer</h3>
+            <p>Boost focus with a 25-minute timer cycle.</p>
+            <p><strong>Technologies:</strong>HTML, CSS, JavaScript</p>
+            <a href="js/pomo/index.html" target="_blank" class="live-demo-btn">Live Demo</a>
+          </div>
+          <div class="artist-card" onclick="location.href='js/art/index.html'"data-category="html">
+            <img src="js/images/13.jpg" alt="Art Gallery" />
+            <h3>Digital Art Gallery</h3>
+            <p>Showcase of digital art in a gallery format.</p>
+            <p><strong>Technologies:</strong>HTML, CSS</p>
+            <a href="js/art/index.html" target="_blank" class="live-demo-btn">Live Demo</a>
+          </div>
+          <div class="artist-card" onclick="location.href='js/py/Calculator.py'"data-category="python">
+            <img src="js/images/5.png" alt="Python Calculator" />
+            <h3>Python Calculator</h3>
+            <p>Basic operations via command-line interface.</p>
+            <p><strong>Technologies:</strong>Python</p>
+            <a href="js/py/Calculator.py" target="_blank" class="live-demo-btn">Live Demo</a>
+          </div>
+          <div class="artist-card" onclick="location.href='js/py/contact_book.py'"data-category="python">
+            <img src="js/images/5.png" alt="Contact Book" />
+            <h3>Contact Book</h3>
+            <p>Simple contact manager with CLI interaction.</p>
+            <p><strong>Technologies:</strong>Python</p>
+            <a href="js/py/contact_book.py" target="_blank" class="live-demo-btn">Live Demo</a>
+          </div>
+          <div class="artist-card" onclick="location.href='js/py/Game.py'"data-category="python">
+            <img src="js/images/2.JPG-2da9a92d-d31b-4858-b504-6591710684bf" alt="Rock Paper Scissors" />
+            <h3>Rock Paper Scissors</h3>
+            <p>Play the classic game against the computer in Python.</p>
+            <p><strong>Technologies:</strong>Python</p>
+            <a href="js/py/Game.py" target="_blank" class="live-demo-btn">Live Demo</a>
+          </div>
+  
+          <div class="artist-card" onclick="location.href='js/py/to_do_list.py'"data-category="python">
+            <img src="js/images/5.png" alt="To Do List" />
+            <h3>To Do List</h3>
+            <p>Keep track of tasks and manage your schedule efficiently.</p>
+            <p><strong>Technologies:</strong>Python</p>
+            <a href="js/py/to_do_list.py" target="_blank" class="live-demo-btn">Live Demo</a>
+          </div>
+        </div>
+        <button class="slider-btn right" onclick="scrollSlider('projects-slider', 1)">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 id="topic">Skills</h2>
+      <div class="slider-wrapper">
+        <button class="slider-btn left" onclick="scrollSlider('skills-slider', -1)">←</button>
+        <div class="slider-track" id="skills-slider">
+        
+          <div class="artist-card">
+            <img src="js/images/6.png" alt="HTML" />
+            <h3>HTML</h3>
+            <p>4+ years | School</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%;"></div>
+            </div>
+          </div>  
+          <div class="artist-card">
+            <img src="js/images/7.webp" alt="HTML" />
+            <h3>CSS</h3>
+            <p>4+ years | School</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%;"></div>
+            </div>
+          </div>          
+          <div class="artist-card">
+            <img src="js/images/5.png" alt="Python" />
+            <h3>Python</h3>
+            <p>7 months | Internship</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 40%;"></div>
+            </div>
+          </div>     
+          <div class="artist-card">
+            <img src="js/images/10.png" alt="DevOps" />
+            <h3>GitBash</h3>
+            <p>7 months | Tech Community</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%;"></div>
+            </div>
+          </div>  
+          <div class="artist-card">
+            <img src="js/images/8.png" alt="DevOps" />
+            <h3>DevOps</h3>
+            <p>7 months | Tech Community</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 25%;"></div>
+              </div>
+            </div>     
+          <div class="artist-card">
+            <img src="js/images/12.png" alt="Java" />
+            <h3>Java</h3>
+            <p>4 months | Self-taught</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 30%;"></div>
+            </div>
+          </div>
+          <div class="artist-card">
+            <img src="js/images/9.png" alt="Public Speaking" />
+            <h3>Public Speaking</h3>
+            <p>2+ years | Self-taught</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%;"></div>
+            </div>
+          </div>     
+        </div>
+        <button class="slider-btn right" onclick="scrollSlider('skills-slider', 1)">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <h2 id="topic">Experience</h2>
+      <div class="experience-entry">
+        <h3>Trainee</h3>
+        <p><strong>New Horizons ICT Resource Center</strong> | Nov 2024 – Present</p>
+        <ul>
+          <li>Trained in HTML, CSS, JavaScript Fundamentals</li>
+          <li>Collaborated with peers on group tasks and assesements</li>
+        </ul>
+      </div></div>
+      <div class="experience-entry">
+        <h3>Cloud DevOps Engineer</h3>
+        <p><strong>Inventors Community</strong> | Nov 2024 – Present</p>
+        <ul>
+          <li>Learned how to build efficient and scalable backend solutions using Python and popular frameworks</li>
+          <li>Gained hands-on experience with debugging, version control using Git</li>
+        </ul>
+      </div>
+      <div class="experience-entry">
+        <h3>Python Developer</h3>
+        <p><strong>Codsoft</strong> | Dec 2024 – Jan 2025</p>
+        <ul>
+          <li>Built interactive web pages using HTML, CSS, and JavaScript.</li>
+          <li>Collaborated with a team to deliver responsive UI/UX features.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 id="topic">Contact Me</h2>
+      <div class="contact-wrapper">
+        <form class="contact-form" id="contact-form">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+          <p id="form-feedback"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="social-links">
+        <a href="https://github.com/alya1layan" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/afolayanaaliyah/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <p>Current Date & Time: <span id="date-time"></span></p>
+      <a href="#top" class="back-to-top">Back to Top ↑</a>
+      <button id="backToTop" title="Back to top">↑</button>
+    </div>
+  </footer>  
+  <!-- Script -->
+  <script>
+    function updateDateTime() {
+    const now = new Date();
+    const formatted = now.toLocaleString("en-US", {
+      weekday: "short",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true
+    });
+    document.getElementById("date-time").textContent = formatted;
+  }
+
+  updateDateTime(); // initial call
+  setInterval(updateDateTime, 1000);
+
+    function scrollSlider(id, direction) {
+      const slider = document.getElementById(id);
+      const card = slider.querySelector('.artist-card');
+      const scrollAmount = card.offsetWidth + 16;
+      slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const feedback = document.getElementById("form-feedback");
+
+    if (name && email && message) {
+      feedback.textContent = "Message sent successfully!";
+      feedback.style.color = "green";
+      this.reset();
+    } else {
+      feedback.textContent = "Please fill in all fields.";
+      feedback.style.color = "red";
+    }
+  });
+  function filterProjects(category) {
+  const cards = document.querySelectorAll("#projects-slider .artist-card");
+  cards.forEach(card => {
+    const isVisible = category === "all" || card.dataset.category === category;
+    card.style.display = isVisible ? "block" : "none";
+  });
+}
+    // Show/hide back to top button
+    window.onscroll = function () {
+      const btn = document.getElementById("backToTop");
+      btn.style.display = window.scrollY > 200 ? "block" : "none";
+    };
+
+    // Scroll to top when clicked
+    document.getElementById("backToTop").onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    document.getElementById("backToTops").onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
